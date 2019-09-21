@@ -1,4 +1,0 @@
-<resources>
-  <string name="app_name">Example Simple</string>
-  <string translatable="false" name="start_url">https://example.org/</string>
-</resources>

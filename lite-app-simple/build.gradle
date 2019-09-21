@@ -6,6 +6,9 @@ android {
     applicationId "org.example.liteapp.simple"
     minSdkVersion 21
     targetSdkVersion 28
+
+    resValue("string", "start_url", "https://example.org/")
+    resValue("string", "app_name", "Example Simple")
   }
 
   buildTypes {
