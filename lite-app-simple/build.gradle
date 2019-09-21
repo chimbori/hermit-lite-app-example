@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: "com.android.application"
 
 android {
   compileSdkVersion 29
@@ -13,6 +13,6 @@ android {
 }
 
 dependencies {
-  implementation 'androidx.annotation:annotation:1.1.0'
-  implementation 'com.github.chimbori:hermit-lite-app-starter:0.1.0'
+  implementation "androidx.annotation:annotation:1.1.0"
+  implementation "com.github.chimbori:hermit-lite-app-starter:0.1.0"
 }
