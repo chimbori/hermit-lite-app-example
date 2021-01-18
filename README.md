@@ -7,7 +7,7 @@ Now you can have Hermit Lite Apps in your App Drawer as well!
 
 ## Getting Started
 
-1.  Download this sample project. (via [zip file](https://github.com/chimbori/hermit-lite-app-apk-sample/archive/master.zip) or [git clone](github-mac://openRepo/https://github.com/chimbori/hermit-lite-app-apk-sample)).
+1.  Download this example project. (via [zip file](https://github.com/chimbori/hermit-lite-app-apk-sample/archive/master.zip) or [git clone](github-mac://openRepo/https://github.com/chimbori/hermit-lite-app-apk-sample)).
 
 1.  Open the downloaded project in [Android Studio](https://developer.android.com/studio).
 
