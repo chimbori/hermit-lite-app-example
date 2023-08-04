@@ -8,21 +8,21 @@ import android.net.Uri
 import android.os.Bundle
 import android.text.Html
 import android.text.Html.FROM_HTML_MODE_LEGACY
-import android.view.View
-import android.widget.TextView
 import android.widget.Toast
 import android.widget.Toast.LENGTH_LONG
 import com.chimbori.liteappstarter.LiteAppStarterActivity.Companion.HERMIT_PACKAGE_NAME
 import org.example.liteapp.R
+import org.example.liteapp.databinding.ActivityInstallDialogBinding
 
 class InstallActivity : Activity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_install_dialog)
 
-    findViewById<TextView>(R.id.install_dialog_description).text =
-      Html.fromHtml(getString(R.string.hermit_description), FROM_HTML_MODE_LEGACY)
-    findViewById<View>(R.id.install_dialog_install_button).setOnClickListener {
+    val binding = ActivityInstallDialogBinding.inflate(layoutInflater)
+    setContentView(binding.root)
+
+    binding.installDialogDescription.text = Html.fromHtml(getString(R.string.hermit_description), FROM_HTML_MODE_LEGACY)
+    binding.installDialogInstallButton.setOnClickListener {
       try {
         startActivity(Intent(ACTION_VIEW, Uri.parse("market://details?id=$HERMIT_PACKAGE_NAME")))
       } catch (e: ActivityNotFoundException) {
@@ -35,7 +35,7 @@ class InstallActivity : Activity() {
       }
       finishAndRemoveTask()
     }
-    findViewById<View>(R.id.install_dialog_cancel_button).setOnClickListener {
+    binding.installDialogCancelButton.setOnClickListener {
       finishAndRemoveTask()
     }
   }
