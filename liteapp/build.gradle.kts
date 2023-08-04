@@ -42,9 +42,6 @@ android {
 
 dependencies {
   implementation("androidx.annotation:annotation:1.2.0")
-
-  // implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-
   androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
   androidTestImplementation("androidx.test:core:1.4.0")
   androidTestImplementation("androidx.test:runner:1.4.0")
