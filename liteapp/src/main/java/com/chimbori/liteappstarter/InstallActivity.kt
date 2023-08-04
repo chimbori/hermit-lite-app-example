@@ -11,8 +11,7 @@ import android.text.Html.FROM_HTML_MODE_LEGACY
 import android.widget.Toast
 import android.widget.Toast.LENGTH_LONG
 import com.chimbori.liteappstarter.LiteAppStarterActivity.Companion.HERMIT_PACKAGE_NAME
-import org.example.liteapp.R
-import org.example.liteapp.databinding.ActivityInstallDialogBinding
+import com.chimbori.liteappstarter.databinding.ActivityInstallDialogBinding
 
 class InstallActivity : Activity() {
   override fun onCreate(savedInstanceState: Bundle?) {

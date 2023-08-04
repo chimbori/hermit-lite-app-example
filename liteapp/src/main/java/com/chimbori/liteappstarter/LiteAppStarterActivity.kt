@@ -6,7 +6,6 @@ import android.content.Intent
 import android.content.Intent.ACTION_VIEW
 import android.net.Uri
 import android.os.Bundle
-import org.example.liteapp.R
 
 /** The main code for this app, served as a library. No need to make any changes here. */
 class LiteAppStarterActivity : Activity() {

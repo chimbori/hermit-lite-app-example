@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-  namespace = "org.example.liteapp"
+  namespace = "com.chimbori.liteappstarter"
   compileSdk = libs.versions.compileSdk.get().toInt()
 
   buildFeatures {
