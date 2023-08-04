@@ -1,6 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
-  package="org.example.liteapp">
+  xmlns:tools="http://schemas.android.com/tools">
 
   <application
     android:allowBackup="true"
@@ -8,6 +7,31 @@
     android:label="@string/app_name"
     android:supportsRtl="true"
     tools:ignore="GoogleAppIndexingWarning">
+
+    <uses-library
+      android:name="android.test.runner"
+      android:required="false"/>
+
+    <activity
+      android:name="com.chimbori.liteappstarter.LiteAppStarterActivity"
+      android:excludeFromRecents="true"
+      android:exported="true"
+      android:resizeableActivity="true"
+      android:theme="@android:style/Theme.NoDisplay"
+      tools:targetApi="n">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+
+    <activity
+      android:name="com.chimbori.liteappstarter.InstallActivity"
+      android:excludeFromRecents="true"
+      android:exported="true"
+      android:resizeableActivity="true"
+      android:theme="@android:style/Theme.Material.Light.Dialog.NoActionBar.MinWidth"
+      tools:targetApi="n"/>
 
   </application>
 

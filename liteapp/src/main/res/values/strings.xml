@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="missing_component">Missing Component</string>
+  <string name="hermit_description">
+    <![CDATA[<p>This Lite App was designed using<br><b>Hermit • Lite Apps Browser</b>.</p>
+    To run it, you need to install Hermit first, a free download available securely from Google Play Store.]]></string>
+  <string name="install">Install</string>
+  <string name="cancel">Cancel</string>
+  <string name="error_play_store">Error connecting to Google Play</string>
+  <string name="error_no_app_available">No app available to handle this action.</string>
+</resources>
