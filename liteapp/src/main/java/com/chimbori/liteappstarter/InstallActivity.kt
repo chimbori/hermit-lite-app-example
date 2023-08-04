@@ -5,8 +5,6 @@ import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.Intent.ACTION_VIEW
 import android.net.Uri
-import android.os.Build.VERSION.SDK_INT
-import android.os.Build.VERSION_CODES.N
 import android.os.Bundle
 import android.text.Html
 import android.text.Html.FROM_HTML_MODE_LEGACY
@@ -22,12 +20,8 @@ class InstallActivity : Activity(), View.OnClickListener {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_install_dialog)
 
-    findViewById<TextView>(R.id.install_dialog_description).text = if (SDK_INT >= N) {
+    findViewById<TextView>(R.id.install_dialog_description).text =
       Html.fromHtml(getString(R.string.hermit_description), FROM_HTML_MODE_LEGACY)
-    } else {
-      @Suppress("DEPRECATION")
-      Html.fromHtml(getString(R.string.hermit_description))
-    }
     findViewById<View>(R.id.install_dialog_install_button).setOnClickListener(this)
     findViewById<View>(R.id.install_dialog_cancel_button).setOnClickListener(this)
   }
