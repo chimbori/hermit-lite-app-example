@@ -15,33 +15,28 @@ import android.widget.Toast.LENGTH_LONG
 import com.chimbori.liteappstarter.LiteAppStarterActivity.Companion.HERMIT_PACKAGE_NAME
 import org.example.liteapp.R
 
-class InstallActivity : Activity(), View.OnClickListener {
+class InstallActivity : Activity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_install_dialog)
 
     findViewById<TextView>(R.id.install_dialog_description).text =
       Html.fromHtml(getString(R.string.hermit_description), FROM_HTML_MODE_LEGACY)
-    findViewById<View>(R.id.install_dialog_install_button).setOnClickListener(this)
-    findViewById<View>(R.id.install_dialog_cancel_button).setOnClickListener(this)
-  }
-
-  override fun onClick(view: View) {
-    when (view.id) {
-      R.id.install_dialog_install_button -> {
+    findViewById<View>(R.id.install_dialog_install_button).setOnClickListener {
+      try {
+        startActivity(Intent(ACTION_VIEW, Uri.parse("market://details?id=$HERMIT_PACKAGE_NAME")))
+      } catch (e: ActivityNotFoundException) {
+        Toast.makeText(applicationContext, R.string.error_play_store, LENGTH_LONG).show()
         try {
-          startActivity(Intent(ACTION_VIEW, Uri.parse("market://details?id=$HERMIT_PACKAGE_NAME")))
+          startActivity(Intent(ACTION_VIEW, Uri.parse(HERMIT_DOWNLOAD_LOCATION)))
         } catch (e: ActivityNotFoundException) {
-          Toast.makeText(applicationContext, R.string.error_play_store, LENGTH_LONG).show()
-          try {
-            startActivity(Intent(ACTION_VIEW, Uri.parse(HERMIT_DOWNLOAD_LOCATION)))
-          } catch (e: ActivityNotFoundException) {
-            Toast.makeText(applicationContext, getString(R.string.error_no_app_available), LENGTH_LONG).show()
-          }
+          Toast.makeText(applicationContext, getString(R.string.error_no_app_available), LENGTH_LONG).show()
         }
-        finishAndRemoveTask()
       }
-      R.id.install_dialog_cancel_button -> finishAndRemoveTask()
+      finishAndRemoveTask()
+    }
+    findViewById<View>(R.id.install_dialog_cancel_button).setOnClickListener {
+      finishAndRemoveTask()
     }
   }
 
