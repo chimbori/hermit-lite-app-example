@@ -4,7 +4,7 @@ targetSdk = "33"
 minSdk = "28"
 
 kotlin = "1.9.0"
-gradle-plugin = "8.0.2"
+gradle-plugin = "8.1.0"
 
 [libraries]
 # buildscript.dependencies
