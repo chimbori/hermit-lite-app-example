@@ -1,1 +1,1 @@
-include(":liteapp")
+include(":liteappstarter")
