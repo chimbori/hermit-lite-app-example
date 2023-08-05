@@ -29,7 +29,7 @@
       android:excludeFromRecents="true"
       android:exported="true"
       android:resizeableActivity="true"
-      android:theme="@android:style/Theme.Material.Light.Dialog.NoActionBar.MinWidth"/>
+      android:theme="@android:style/Theme.Material.Dialog.NoActionBar.MinWidth"/>
 
   </application>
 

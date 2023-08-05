@@ -11,6 +11,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/padding_one_point_five"
+    android:layout_marginTop="@dimen/padding_standard"
     android:layout_marginEnd="@dimen/padding_one_point_five"
     android:layout_marginBottom="@dimen/padding_half"
     android:text="@string/missing_component"/>
