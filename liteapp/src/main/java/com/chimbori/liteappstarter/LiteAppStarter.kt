@@ -41,7 +41,11 @@ class InstallActivity : Activity() {
     )
     binding.installDialogInstallButton.setOnClickListener {
       try {
-        startActivity(Intent(ACTION_VIEW, Uri.parse("market://details?id=$HERMIT_PACKAGE_NAME")))
+        startActivity(
+          Intent(
+            ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$HERMIT_PACKAGE_NAME")
+          )
+        )
       } catch (e: ActivityNotFoundException) {
         Toast.makeText(applicationContext, R.string.error_play_store, LENGTH_LONG).show()
         try {
