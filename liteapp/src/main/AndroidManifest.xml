@@ -8,10 +8,6 @@
     android:supportsRtl="true"
     tools:ignore="GoogleAppIndexingWarning">
 
-    <uses-library
-      android:name="android.test.runner"
-      android:required="false"/>
-
     <activity
       android:name="com.chimbori.liteappstarter.LiteAppStarterActivity"
       android:excludeFromRecents="true"
