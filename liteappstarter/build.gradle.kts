@@ -28,10 +28,7 @@ android {
   buildFeatures {
     buildConfig = true
   }
-
-  kotlinOptions {
-    jvmTarget = "17"
-  }
+  kotlinOptions { jvmTarget = "17" }
   compileOptions {
     sourceCompatibility = VERSION_17
     targetCompatibility = VERSION_17
