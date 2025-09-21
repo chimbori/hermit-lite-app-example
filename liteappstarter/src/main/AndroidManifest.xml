@@ -10,10 +10,12 @@
 
     <activity
       android:name="com.chimbori.liteappstarter.LiteAppStarterActivity"
+      android:enableOnBackInvokedCallback="true"
       android:excludeFromRecents="true"
       android:exported="true"
       android:resizeableActivity="true"
-      android:theme="@android:style/Theme.NoDisplay">
+      android:theme="@android:style/Theme.NoDisplay"
+      tools:ignore="UnusedAttribute">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
         <category android:name="android.intent.category.LAUNCHER"/>
@@ -22,10 +24,12 @@
 
     <activity
       android:name="com.chimbori.liteappstarter.InstallActivity"
+      android:enableOnBackInvokedCallback="true"
       android:excludeFromRecents="true"
       android:exported="true"
       android:resizeableActivity="true"
-      android:theme="@android:style/Theme.Material.Dialog.NoActionBar.MinWidth"/>
+      android:theme="@android:style/Theme.Material.Dialog.NoActionBar.MinWidth"
+      tools:ignore="UnusedAttribute"/>
 
   </application>
 
