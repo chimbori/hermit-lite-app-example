@@ -1,4 +1,5 @@
-import org.gradle.api.JavaVersion.VERSION_17
+import org.gradle.api.JavaVersion.VERSION_21
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21
 
 plugins {
   id("com.android.application")
@@ -28,9 +29,19 @@ android {
   buildFeatures {
     buildConfig = true
   }
-  kotlinOptions { jvmTarget = "17" }
+  java {
+    toolchain {
+      languageVersion = JavaLanguageVersion.of(21)
+    }
+  }
+  kotlin {
+    compilerOptions {
+      jvmTarget.set(JVM_21)
+      freeCompilerArgs.add("-Xannotation-target-all")
+    }
+  }
   compileOptions {
-    sourceCompatibility = VERSION_17
-    targetCompatibility = VERSION_17
+    sourceCompatibility = VERSION_21
+    targetCompatibility = VERSION_21
   }
 }
